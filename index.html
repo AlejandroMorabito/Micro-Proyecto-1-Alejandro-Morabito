@@ -9,8 +9,30 @@
 <body>
   <div>
     <center><h1>Bingo</h1>
+      <div class="score-containaer">
+        / Score player 1 : <span id="score-p1">0</span>
+        / Score player 2 : <span id="score-p2">0</span>
+        / Score player 3 : <span id="score-p3">0</span>
+        / Score player 4 : <span id="score-p4">0</span>
+      </div>
+      <div>
+        <h2>Jugadores</h2>
+        <form @submit.prevent="iniciarJuego">
+          <label for="jugador1">Nombre Jugador 1:</label>
+          <input type="text" id="jugador1" v-model="jugadores[0].nombre">
+          
+          <label for="jugador2">Nombre Jugador 2:</label>
+          <input type="text" id="jugador2" v-model="jugadores[1].nombre">
+          
+          <label for="jugador3">Nombre Jugador 3:</label>
+          <input type="text" id="jugador1" v-model="jugadores[2].nombre">
+          
+          <label for="jugador4">Nombre Jugador 4:</label>
+          <input type="text" id="jugador1" v-model="jugadores[3].nombre">
+        </div>
+        <br>
     <p class="pdrawBall" id="pdrawBall"></p>
-    ¿Cuantas cartones de bingo?: <input type="text" id="txtInput" placeholder="Ingresa numero de cartonas">
+    ¿Cuantas cartones de bingo?: <input type="text" id="txtInput" placeholder="Ingresa numero de cartones">
     <select id="tamanio" v-model="tamanio">
       <option value="3">3x3</option>
       <option value="4">4x4</option>
