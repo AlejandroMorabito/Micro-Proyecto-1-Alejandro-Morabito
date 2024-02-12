@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Micro-Proyecto 1, Alejandro Morabito</title>
+</head>
+<body>
+  <div>
+    <center><h1>Bingo</h1>
+    <p class="pdrawBall" id="pdrawBall"></p>
+    ¿Cuantas cartones de bingo?: <input type="text" id="txtInput" placeholder="Ingresa numero de cartonas">
+    <select id="tamanio" v-model="tamanio">
+      <option value="3">3x3</option>
+      <option value="4">4x4</option>
+      <option value="5">5x5</option>
+    </select>
+    <button id="btnDraw" onclick="draw()"> Mostrar cartones </button>
+    <button id="btnDrawBall" onclick="drawBall()">Obtener bola</button>
+    <button onclick="clearCards()">Borrar</button>
+  </center>
+  </div>
+      <p id="pCount">Número de cartones: 0</p>
+      <br>
+      <div id = "divBingoCard"></div>
+  <script src="script.js"></script>
+
+</body>
+</html>
